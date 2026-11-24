@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse courses and find students looking to study together at St. Francis Xavier University.">
+  <title>Browse Courses — StudyMatch</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="study-match.js" defer></script>
+</head>
+<body data-page="courses">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="StudyMatch home"><span class="brand-mark" aria-hidden="true">s</span><span>study<span class="brand-accent">match</span></span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="courses.html">Courses</a><a href="network.html">How Network Works</a><a href="profile.html">Profile</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Find your course community</p>
+      <h1>What are you studying?</h1>
+      <p>Pick a course to see who's ready to study together. All examples are made up for this student prototype.</p>
+    </section>
+    <section class="course-grid" id="course-list" aria-label="Available courses">
+      <a class="course-card" href="course.html?course=PSYC101"><span class="course-card-top"><span class="course-code">PSYC 101</span><span class="course-arrow" aria-hidden="true">↗</span></span><h2>Introduction to Psychology</h2><span class="looking-count"><span class="tiny-dot"></span> 8 students looking</span></a>
+      <a class="course-card" href="course.html?course=BUSI241"><span class="course-card-top"><span class="course-code">BUSI 241</span><span class="course-arrow" aria-hidden="true">↗</span></span><h2>Marketing Principles</h2><span class="looking-count"><span class="tiny-dot"></span> 12 students looking</span></a>
+      <a class="course-card" href="course.html?course=CSCI162"><span class="course-card-top"><span class="course-code">CSCI 162</span><span class="course-arrow" aria-hidden="true">↗</span></span><h2>Introduction to Computer Science</h2><span class="looking-count"><span class="tiny-dot"></span> 6 students looking</span></a>
+      <a class="course-card" href="course.html?course=ENGL100"><span class="course-card-top"><span class="course-code">ENGL 100</span><span class="course-arrow" aria-hidden="true">↗</span></span><h2>Reading and Writing About Literature</h2><span class="looking-count"><span class="tiny-dot"></span> 5 students looking</span></a>
+      <a class="course-card" href="course.html?course=MATH105"><span class="course-card-top"><span class="course-code">MATH 105</span><span class="course-arrow" aria-hidden="true">↗</span></span><h2>Precalculus Mathematics</h2><span class="looking-count"><span class="tiny-dot"></span> 9 students looking</span></a>
+    </section>
+    <aside class="soft-callout">
+      <span class="callout-icon" aria-hidden="true">✦</span>
+      <p><strong>A course feels different together.</strong> See what happens as more classmates join the board.</p>
+      <a class="text-link" href="network.html">Explore the network effect <span aria-hidden="true">→</span></a>
+    </aside>
+  </main>
+  <footer class="site-footer"><p>Student prototype for BSAD 281 – not a real service.</p></footer>
+</body>
+</html>

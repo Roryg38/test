@@ -3,178 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A simple garden dashboard to keep houseplant watering on track.">
-  <title>Fern &amp; Found</title>
+  <meta name="description" content="Find study partners and make your next course feel a little less solo.">
+  <title>StudyMatch — Find your study people</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="study-match.js" defer></script>
 </head>
-<body>
+<body data-page="home">
   <header class="site-header">
-    <a class="brand" href="#garden" aria-label="Fern & Found home">
-      <span class="brand-mark" aria-hidden="true">f.</span>
-      <span>fern <span class="brand-amp">&amp;</span> found</span>
+    <a class="brand" href="index.html" aria-label="StudyMatch home">
+      <span class="brand-mark" aria-hidden="true">s</span>
+      <span>study<span class="brand-accent">match</span></span>
     </a>
-    <nav aria-label="Main navigation">
-      <a href="#garden">My garden</a>
-      <a href="#sitters">Plant sitters</a>
-      <a href="#plans">Plans</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="network.html">How Network Works</a>
+      <a href="profile.html">Profile</a>
     </nav>
   </header>
 
   <main>
-    <section id="garden" data-view>
-      <div class="garden-banner">
-        <div class="banner-copy">
-          <p class="eyebrow">Your growing space</p>
-          <h1 id="tagline">A little care, right on time.</h1>
-          <p id="pitch">Your plants, in a good routine.</p>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Your campus, on the same page</p>
+        <h1>Find study partners in your courses</h1>
+        <p class="hero-subtitle">A better way to find your people, compare notes, and make the next study session happen.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="courses.html">Browse Courses <span aria-hidden="true">→</span></a>
+          <a class="button button-outline" href="network.html">See How It Works</a>
         </div>
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1000&q=85" alt="Sunlit green leaves of a houseplant" class="banner-image">
+        <p class="hero-footnote"><span aria-hidden="true">✳</span> Made for the St. Francis Xavier University community</p>
       </div>
-
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Monday, in the garden</p>
-          <h2>Today's care</h2>
+      <div class="hero-art" aria-label="A preview of students connecting to study">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-card art-card-main">
+          <div class="art-card-top"><span class="course-pill">CSCI 162</span><span class="online-dot">● 4 looking</span></div>
+          <p class="art-card-title">Intro to Computer Science</p>
+          <div class="art-avatars" aria-hidden="true"><span>AM</span><span>JL</span><span>SK</span><span>+1</span></div>
+          <p class="art-card-note">Find your next study crew <span aria-hidden="true">↗</span></p>
         </div>
-        <button class="button primary" type="button" id="open-plant-form"><span aria-hidden="true">+</span> Add a plant</button>
-      </div>
-
-      <div class="stats" aria-label="Garden overview">
-        <article class="stat stat-alert">
-          <span class="stat-label">Needs attention</span>
-          <strong id="due-count">0</strong>
-          <span id="due-caption">plants ready for a drink</span>
-        </article>
-        <article class="stat stat-leaf">
-          <span class="stat-label">In your garden</span>
-          <strong id="plant-count">0</strong>
-          <span>plants in your care</span>
-        </article>
-        <article class="stat stat-sky">
-          <span class="stat-label">Up next</span>
-          <strong id="next-plant">—</strong>
-          <span id="next-caption">Your garden is all caught up</span>
-        </article>
-      </div>
-
-      <div class="list-heading">
-        <div>
-          <p class="eyebrow">Sorted by what needs you first</p>
-          <h2>Watering queue</h2>
-        </div>
-        <div class="filter-group" role="group" aria-label="Filter plants">
-          <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">All plants</button>
-          <button type="button" class="filter-button" data-filter="due" aria-pressed="false">Needs water</button>
-        </div>
-      </div>
-      <div class="plant-list" id="plant-list" aria-live="polite"></div>
-      <div class="empty-state" id="empty-state" hidden>
-        <span class="empty-mark" aria-hidden="true">+</span>
-        <h3>Your garden is ready to grow</h3>
-        <p>Add your first plant to start a watering routine.</p>
-        <button class="button secondary" type="button" id="empty-add-plant">Add your first plant</button>
+        <div class="art-float float-note"><span class="float-icon">✎</span><span><strong>Study together</strong><small>Make a plan that sticks</small></span></div>
+        <div class="art-float float-check"><span class="check-icon" aria-hidden="true">✓</span><span><strong>Same course</strong><small>Better together</small></span></div>
+        <span class="art-spark spark-one" aria-hidden="true">✳</span>
+        <span class="art-spark spark-two" aria-hidden="true">✦</span>
       </div>
     </section>
 
-    <section id="sitters" data-view hidden>
-      <div class="page-intro">
-        <p class="eyebrow">A future idea for Fern &amp; Found</p>
-        <h1>Good care, even when you're away.</h1>
-        <p>Find a trusted plant sitter for a weekend away or a longer trip. A local network could make plant care more dependable and give sitters a way to earn.</p>
+    <section class="home-bottom">
+      <div>
+        <p class="eyebrow">Good things happen in a group chat</p>
+        <h2>Start with one course.<br>Find your study people.</h2>
       </div>
-      <div class="sitter-layout">
-        <article class="sitter-feature">
-          <span class="feature-number">01</span>
-          <h2>Plant sitting, close to home</h2>
-          <p>Match plant owners with nearby people who can water, check light, and follow each plant's care notes.</p>
-          <span class="concept-label">Marketplace concept · not available yet</span>
-        </article>
-        <aside class="sitter-notes">
-          <h2>What it would take</h2>
-          <ul>
-            <li>Enough local sitters to make matching useful</li>
-            <li>Profiles, reviews, and clear care instructions</li>
-            <li>Trust, safety, and a fair way to resolve problems</li>
-          </ul>
-          <a class="text-link" href="#plans">See the recommended business model <span aria-hidden="true">→</span></a>
-        </aside>
-      </div>
-    </section>
-
-    <section id="plans" data-view hidden>
-      <div class="page-intro">
-        <p class="eyebrow">A business that grows with your garden</p>
-        <h1>Keep the essentials free. Charge for peace of mind.</h1>
-        <p>Ads are easy to add, but they interrupt a quiet care routine and may earn little from a small, focused audience. A useful free plan with an optional upgrade is a better first test.</p>
-      </div>
-      <div class="plan-grid">
-        <article class="plan plan-free">
-          <p class="eyebrow">Start here</p>
-          <h2>Garden</h2>
-          <p class="plan-price">Free</p>
-          <p>Keep a plant list, see what needs water, and track each watering.</p>
-          <span class="plan-note">The core habit stays accessible.</span>
-        </article>
-        <article class="plan plan-plus">
-          <p class="eyebrow">Test with real customers</p>
-          <h2>Care Plus</h2>
-          <p class="plan-price">$3–5 <span>/ month · proposed</span></p>
-          <p>Try paid reminders, shared household access, care history, and trip planning.</p>
-          <span class="plan-note">A price hypothesis, not a live subscription.</span>
-        </article>
-      </div>
-      <div class="sitter-revenue">
-        <div class="sitter-revenue-mark" aria-hidden="true">↗</div>
-        <div>
-          <p class="eyebrow">Later, if customers ask for it</p>
-          <h2>Earn a fee on sitter bookings</h2>
-          <p>A sitter marketplace could add a booking fee and become more useful as local owners and sitters join. Start in one area only after validating demand and putting trust and safety in place.</p>
-        </div>
-      </div>
-      <p class="prototype-note">This student prototype stores garden data in this browser only. Plans and sitter matching are concepts; no payments or bookings are collected.</p>
+      <a class="text-link" href="courses.html">Explore courses <span aria-hidden="true">→</span></a>
     </section>
   </main>
 
-  <dialog class="plant-dialog" id="plant-dialog" aria-labelledby="form-title">
-    <form id="plant-form">
-      <div class="dialog-heading">
-        <div>
-          <p class="eyebrow">Make room for another</p>
-          <h2 id="form-title">Add a plant</h2>
-        </div>
-        <button class="icon-button" id="close-plant-form" type="button" aria-label="Close form">×</button>
-      </div>
-      <label class="field-label" for="plant-name">Plant name <span aria-hidden="true">*</span>
-        <input id="plant-name" name="name" type="text" maxlength="60" placeholder="e.g. My monstera" required>
-      </label>
-      <label class="field-label" for="plant-species">Species <span class="optional">Optional</span>
-        <input id="plant-species" name="species" type="text" maxlength="80" placeholder="e.g. Monstera deliciosa">
-      </label>
-      <div class="form-row">
-        <label class="field-label" for="plant-interval">Water every
-          <span class="input-suffix"><input id="plant-interval" name="intervalDays" type="number" min="1" max="90" value="7" required><span>days</span></span>
-        </label>
-        <label class="field-label" for="plant-last-watered">Last watered
-          <input id="plant-last-watered" name="lastWatered" type="date" required>
-        </label>
-      </div>
-      <label class="field-label" for="plant-location">Where does it live? <span class="optional">Optional</span>
-        <input id="plant-location" name="location" type="text" maxlength="60" placeholder="e.g. Kitchen window">
-      </label>
-      <div class="dialog-actions">
-        <button class="button quiet" id="cancel-plant-form" type="button">Cancel</button>
-        <button class="button primary" type="submit">Add to my garden</button>
-      </div>
-    </form>
-  </dialog>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <footer class="site-footer">
-    <p>Student prototype for BSAD 281 at St. Francis Xavier University. Not a real company; examples are fictional.</p>
-  </footer>
-
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <footer class="site-footer"><p>Student prototype for BSAD 281 – not a real service.</p></footer>
 </body>
 </html>

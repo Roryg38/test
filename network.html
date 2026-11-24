@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore how more students make StudyMatch more useful for everyone in a course.">
+  <title>How the Network Works — StudyMatch</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="study-match.js" defer></script>
+</head>
+<body data-page="network">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="StudyMatch home"><span class="brand-mark" aria-hidden="true">s</span><span>study<span class="brand-accent">match</span></span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="courses.html">Courses</a><a href="network.html">How Network Works</a><a href="profile.html">Profile</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-heading network-heading">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> The more, the merrier</p>
+      <h1>See how StudyMatch gets better with more students</h1>
+      <p>More classmates means more study plans, more schedules, and a better chance of finding someone who fits.</p>
+    </section>
+    <section class="network-demo" aria-labelledby="student-count-label">
+      <div class="demo-controls">
+        <div class="demo-section-label"><span class="step-number">01</span><div><h2 id="student-count-label">Choose a course size</h2><p>How many students are in the course?</p></div></div>
+        <div class="student-options" role="group" aria-label="Number of students in the course">
+          <button type="button" class="student-option" data-students="5" aria-pressed="false">5</button>
+          <button type="button" class="student-option" data-students="15" aria-pressed="false">15</button>
+          <button type="button" class="student-option is-selected" data-students="40" aria-pressed="true">40</button>
+          <button type="button" class="student-option" data-students="80" aria-pressed="false">80</button>
+        </div>
+        <p class="students-caption"><strong id="student-count">40</strong> students in this course</p>
+      </div>
+      <div class="demo-results" aria-live="polite">
+        <div class="demo-section-label"><span class="step-number">02</span><div><h2>What the study board could look like</h2><p>Example estimates for one course</p></div></div>
+        <div class="metrics-grid">
+          <article class="metric-card"><span class="metric-label">Open study posts</span><strong id="open-posts">16</strong><span>people making plans</span><div class="metric-bar"><span id="posts-bar" style="width: 50%"></span></div></article>
+          <article class="metric-card"><span class="metric-label">Potential matches</span><strong id="potential-matches">12</strong><span>options for one student</span><div class="metric-bar match-bar"><span id="matches-bar" style="width: 50%"></span></div></article>
+        </div>
+        <div class="network-insight"><span class="insight-icon" aria-hidden="true">✦</span><p id="network-message">At 40 students, you suddenly have real options. It's easier to find a time, a study style, and a group that fits.</p></div>
+      </div>
+    </section>
+    <p class="estimate-note">Illustrative estimates for a classroom demo, not actual student or usage data.</p>
+    <section class="network-explainer"><div><p class="eyebrow">A useful little loop</p><h2>Every new classmate adds a possibility.</h2></div><p>When there are more students in the same course, there are more people to make a post, join a session, or share a study tip. That makes the board more helpful for everyone.</p></section>
+  </main>
+  <footer class="site-footer"><p>Student prototype for BSAD 281 – not a real service.</p></footer>
+</body>
+</html>
